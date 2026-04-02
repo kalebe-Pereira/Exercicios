@@ -1,23 +1,20 @@
 // Exercício 009
-// Faça um programa que parte a temperatura em graus Farenheit, transforma e mostra a temperatura em graus Celsius. C=(5*(F-32)/9).
+// Faça um programa que parte a temperatura em graus fahrenheit, transforma e mostra a temperatura em graus Celsius. C=(5*(F-32)/9).
 
-
-#include <iomanip>
 #include <iostream>
 
 using namespace std;
 
 int main()
 {
-    float farenheit; float celsius;
+    float fahrenheit, celsius;
 
-    cout << "Digite a temperatura em Farenheit: ";
-    cin >> farenheit;
+    cout << "Digite a temperatura em fahrenheit: ";
+    cin >> fahrenheit;
 
-    celsius = (farenheit - 32) / 1.8;
+    celsius = (fahrenheit - 32) * 5 / 9;
 
-    cout << fixed << setprecision(2) <<
-    "A temperatura de " << farenheit << " em Celsius é " << celsius << endl;
+    cout << "A temperatura de " << fahrenheit << " em Celsius é " << celsius << '\n';
 
     return 0;
 }
