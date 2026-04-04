@@ -19,7 +19,7 @@ int main()
 
     float latas = std::ceil(tinta_usada / 18);
 
-    std::cout << "Quantidade necessária de tinta: " << latas << std::endl;
+    std::cout << "Quantidade necessária de latas: " << latas << std::endl;
     std::cout << "Preço unitário: R$ 80,00" << '\n';
     std::cout << "Preço total a pagar: R$ " << latas * 80 << '\n';
 
