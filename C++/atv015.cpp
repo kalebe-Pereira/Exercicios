@@ -10,6 +10,7 @@
 // = Salário Liquido : R$
 // Obs.: Salário Bruto - Descontos = Salário Líquido.
 
+
 #include <iomanip>
 #include <iostream>
 
