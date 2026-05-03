@@ -58,4 +58,5 @@ int main()
     std::cout << "FGTS...........: R$ " << FGTS << '\n'; 
     std::cout << "Salário Líquido: R$ " << salarioLiquido << '\n'; 
 
+    return 0;
 }
