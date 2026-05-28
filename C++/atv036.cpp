@@ -3,12 +3,14 @@
 
 #include <iostream>
 #include <stdio.h>
+#include <string.h>
+#include <algorithm>
 
 class VerifyData
 {
     public:
         int d, m, y;
-        VerifyData(int d,int  m, int y);
+        VerifyData(std::string d);
 
         int checkDay(int d);
         int checkMonth(int m);
@@ -18,20 +20,32 @@ class VerifyData
     
 int main()
 {
-    int unsigned day, month, year;
+    std::string dataUsuario;
     
     std::cout << "Digite uma data(dd/mm/aaaa): ";
-    scanf("%u/%u/%u", &day, &month, &year);
+    std::cin >> dataUsuario;
     
-    VerifyData *data = new VerifyData(day, month, year);
+    VerifyData *data = new VerifyData(dataUsuario);
 
     delete data;
 
     return 0;
 }
 
-VerifyData::VerifyData(int d, int m, int y)
+VerifyData::VerifyData(std::string data)
 {
+
+    data.erase(std::remove(data.begin(), data.end(), '/'), data.end());
+    
+    if(data.length() != 8)
+    {
+        std::cout << "Formato inválido!" << '\n';
+    }
+
+    int d = std::stoi(data.substr(0, 2));
+    int m = std::stoi(data.substr(2, 2));
+    int y = std::stoi(data.substr(4,4));
+
     this -> d = d;
     this -> m = m;
     this -> y = y;
